@@ -110,8 +110,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header Style */
 .header {
+  min-height: 120px;
   width: 100%;
-  padding: 22px 0 23px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -142,6 +148,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
   width: 117px;
 }
+.header .header__body .header__burger {
+  display: none;
+}
 .header .header__body .header__menu {
   width: 60%;
 }
@@ -161,10 +170,54 @@ h1, h2, h3, h4, h5, h6 {
 .header .header__body .header__menu .menu__list .list__item a:hover {
   text-decoration: underline;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header .container {
+    width: 92%;
+  }
+  .header .container .header__menu {
+    width: 65%;
+  }
+  .header .container .header__menu .menu__list .list__item a {
+    font: 600 18px/22px "Open Sans", sans-serif;
+  }
+}
+@media (max-width: 991px) {
+  .header {
+    min-height: 100px;
+  }
+  .header .header__body .header__menu {
+    display: none;
+  }
+  .header .header__body .header__burger {
+    display: block;
+  }
+  .header .header__body .header__burger img {
+    width: 35px;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    min-height: 75px;
+  }
+  .header .container {
+    width: 90%;
+  }
+  .header .container .header__body .header__logo img {
+    width: 55px;
+  }
+  .header .container .header__body .header__logo .logo__text {
+    font: 10px/14px "Open Sans", sans-serif;
+    width: 73px;
+  }
+  .header .container .header__body .header__burger img {
+    width: 21px;
+  }
+}
 
 /* Slide Style */
 .slide {
   background: url("../img/content-top-fon 1.png") center center no-repeat;
+  background-size: cover;
   margin-top: 120px;
   padding: 217px 0 77px 0;
 }
@@ -200,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 127px;
 }
 .slide .slide__container .slide__body .slide__button-block {
-  width: 47%;
+  width: 49%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,6 +261,16 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 129px;
+}
+.slide .slide__container .slide__body .slide__button-block .button-block__button {
+  width: 46%;
+  padding: 22px 22px;
+  border: 4px solid #FFFFFF;
+  background-color: transparent;
+  font: bold 22px "Roboto", sans-serif;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
 }
 
 /* About us Style */
@@ -341,6 +404,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
   color: #000000;
   margin-bottom: 40px;
+}
+.services .services__container .services__body .services__services-blocks .services-blocks__service .service__button {
+  width: auto;
+  padding: 17px 14px;
+  border: 2px solid #000000;
+  background-color: transparent;
+  font: 600 20px "Open Sans", sans-serif;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: #000000;
 }
 
 /* Price Style */

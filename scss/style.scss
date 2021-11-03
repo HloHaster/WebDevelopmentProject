@@ -12,6 +12,17 @@ $color__lite-gray: #F0F1F1;
 $color__blue: #3949AB;
 $color__dark-gray: #222321;
 
+@mixin button($bw, $pv, $ph, $brs, $brc, $bc, $fw, $fs, $fa, $lh, $tc) {
+  width: $bw;
+  padding: $pv $ph;
+  border: $brs solid $brc;
+  background-color: $bc;
+  font: $fw $fs $fa;
+  line-height: $lh;
+  letter-spacing: 0.1em;
+  color: $tc;
+}
+
 @mixin main-text($tc, $dc) {
   max-width: 822px;
   display: flex;
@@ -54,9 +65,10 @@ $color__dark-gray: #222321;
 /* Header Style */
 
 .header {
-  //min-height: 120px;
+  min-height: 120px;
   width: 100%;
-  padding: 22px 0 23px 0;
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -77,6 +89,10 @@ $color__dark-gray: #222321;
         color: $color__black;
         width: 117px;
       }
+    }
+
+    .header__burger {
+      display: none;
     }
 
     .header__menu {
@@ -101,13 +117,75 @@ $color__dark-gray: #222321;
     }
   }
 
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      width: 92%; ///////////////////////////////////////////////////////////////// todo:подумать
+
+      .header__menu {
+        width: 65%;
+
+        .menu__list {
+          .list__item {
+            a {
+              font: 600 18px/22px $family;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    min-height: 100px;
+
+    .header__body {
+      .header__menu {
+        display: none;
+      }
+
+      .header__burger {
+        display: block;
+
+        img {
+          width: 35px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-height: 75px;
+
+    .container {
+      width: 90%;
+
+      .header__body {
+        .header__logo {
+          img {
+            width: 55px;
+          }
+
+          .logo__text {
+            font: 10px/14px $family;
+            width: 73px;
+          }
+        }
+
+        .header__burger {
+          img {
+            width: 21px;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Slide Style */
 
 .slide {
   background: url("../img/content-top-fon 1.png") center center no-repeat;
-  //padding: 362px 0 77px 0;
+  background-size: cover;
   margin-top: 120px;
   padding: 217px 0 77px 0;
 
@@ -138,11 +216,14 @@ $color__dark-gray: #222321;
       }
 
       .slide__button-block {
-        width: 47%;
+        width: 49%;
         display: flex;
         justify-content: space-between;
         margin-bottom: 129px;
 
+        .button-block__button {
+          @include button(46%, 22px, 22px, 4px, $color__white, transparent, bold, 22px, $family2, 26px, $color__white);
+        }
       }
     }
   }
@@ -255,6 +336,10 @@ $color__dark-gray: #222321;
             letter-spacing: 0.1em;
             color: $color__black;
             margin-bottom: 40px;
+          }
+
+          .service__button {
+            @include button(auto, 17px, 14px, 2px, $color__black, transparent, 600, 20px, $family, 22px, $color__black);
           }
         }
       }
