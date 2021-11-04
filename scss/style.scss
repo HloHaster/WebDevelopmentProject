@@ -61,6 +61,9 @@ $color__dark-gray: #222321;
   @include main-text($color__black, $color__black);
 }
 
+.lock {
+  overflow: hidden;
+}
 
 /* Header Style */
 
@@ -117,9 +120,9 @@ $color__dark-gray: #222321;
     }
   }
 
-  @media (min-width: 992px) and (max-width: 1199px) {
+  @media (min-width: 991px) and (max-width: 1199px) {
     .container {
-      width: 92%; ///////////////////////////////////////////////////////////////// todo:подумать
+      width: 92%;
 
       .header__menu {
         width: 65%;
@@ -141,14 +144,43 @@ $color__dark-gray: #222321;
     .header__body {
       .header__menu {
         display: none;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: $color__white;
+        padding: 20px 0 30px 0;
+        overflow: auto;
+
+        .menu__list {
+          display: block;
+          text-align: right;
+          width: 75%;
+          margin: 0 auto;
+
+          .list__item:not(:last-of-type) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .active {
+        display: block;
       }
 
       .header__burger {
+        width: 35px;
+        height: 23px;
         display: block;
+        position: relative;
+        cursor: pointer;
+        background: url("../img/burger1.png") center center no-repeat;
+        background-size: 100%;
+      }
 
-        img {
-          width: 35px;
-        }
+      .header__close {
+        background: url("../img/Close.png") center center no-repeat;
+        background-size: 80%;
       }
     }
   }
@@ -160,22 +192,29 @@ $color__dark-gray: #222321;
       width: 90%;
 
       .header__body {
-        .header__logo {
-          img {
-            width: 55px;
-          }
 
-          .logo__text {
-            font: 10px/14px $family;
-            width: 73px;
-          }
+        .header__menu {
+          top: 75px;
         }
 
-        .header__burger {
-          img {
+          .header__logo {
+            img {
+              width: 55px;
+            }
+
+            .logo__text {
+              font: 10px/14px $family;
+              width: 73px;
+            }
+          }
+
+          .header__burger {
             width: 21px;
+            height: 14px;
+            img {
+              width: 21px;
+            }
           }
-        }
       }
     }
   }
