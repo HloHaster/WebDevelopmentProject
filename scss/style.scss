@@ -120,7 +120,7 @@ $color__dark-gray: #222321;
     }
   }
 
-  @media (min-width: 991px) and (max-width: 1199px) {
+  @media (min-width: 991px) and (max-width: 1216px) {
     .container {
       width: 92%;
 
@@ -192,29 +192,29 @@ $color__dark-gray: #222321;
       width: 90%;
 
       .header__body {
-
         .header__menu {
           top: 75px;
         }
 
-          .header__logo {
-            img {
-              width: 55px;
-            }
-
-            .logo__text {
-              font: 10px/14px $family;
-              width: 73px;
-            }
+        .header__logo {
+          img {
+            width: 55px;
           }
 
-          .header__burger {
+          .logo__text {
+            font: 10px/14px $family;
+            width: 73px;
+          }
+        }
+
+        .header__burger {
+          width: 21px;
+          height: 14px;
+
+          img {
             width: 21px;
-            height: 14px;
-            img {
-              width: 21px;
-            }
           }
+        }
       }
     }
   }
@@ -242,14 +242,16 @@ $color__dark-gray: #222321;
       .slide__title {
         font: 70px/31% $family;
         letter-spacing: 0.1em;
+        text-align: center;
         color: $color__white;
         margin-bottom: 61px;
       }
 
       .slide__text {
         width: 89%;
-        font: 30px/73% $family;
+        font: 30px/30px $family;
         letter-spacing: 0.1em;
+        text-align: center;
         color: $color__white;
         margin-bottom: 127px;
       }
@@ -263,6 +265,133 @@ $color__dark-gray: #222321;
         .button-block__button {
           @include button(46%, 22px, 22px, 4px, $color__white, transparent, bold, 22px, $family2, 26px, $color__white);
         }
+      }
+    }
+  }
+
+  @media (min-width: 991px) and (max-width: 1216px) {
+    .slide__container {
+      .slide__body {
+        .slide__title {
+          font: 57px/57px $family;
+          margin-bottom: 40px;
+        }
+          .slide__text {
+            font: 25px/25px $family;
+            margin-bottom: 100px;
+          }
+
+        .slide__button-block {
+          width: 63%;
+          margin-bottom: 100px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 991px) {
+    margin-top: 100px;
+    padding: 170px 0 65px 0;
+    .slide__container {
+      width: 93%;
+      .slide__body {
+        .slide__title {
+          font: 47px/50px $family;
+          margin-bottom: 33px;
+        }
+
+        .slide__text {
+          font: 20px/20px $family;
+          margin-bottom: 85px;
+        }
+
+        .slide__button-block {
+          width: 63%;
+          margin-bottom: 80px;
+          .button-block__button {
+            font-size: 20px;
+            padding: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px){
+    margin-top: 75px;
+    padding: 100px 0 50px 0;
+    .slide__container {
+      width: 95%;
+      padding: 5px 0;
+
+      .slide__body {
+        .slide__title {
+          font: 38px/35px $family;
+          margin-bottom: 30px;
+        }
+
+        .slide__text {
+          width: 85%;
+          font: 18px/18px $family;
+          margin-bottom: 50px;
+        }
+
+        .slide__button-block {
+          width: 37%;
+          margin-bottom: 0;
+          flex-direction: column;
+          align-items: center;
+
+          .button-block__button {
+            @include button(100%, 15px, 15px, 2px, $color__white, transparent, bold, 15px, $family2, 15px, $color__white);
+          }
+
+          .button-block__button:first-of-type {
+            margin-bottom: 20px;
+          }
+        }
+
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 75px;
+    padding: 10px 0 10px 0;
+    .slide__container {
+      width: 94%;
+      padding: 10px 0;
+
+      .slide__body {
+        .slide__title {
+          font: 16px/20px $family;
+          margin-bottom: 10px;
+        }
+
+        .slide__text {
+          width: 80%;
+          font: 10px/12px $family;
+          margin-bottom: 15px;
+        }
+
+        .slide__button-block {
+          width: 37%;
+          margin-bottom: 0;
+          flex-direction: column;
+          align-items: center;
+
+          .button-block__button {
+            @include button(100%, 8px, 10px, 2px, $color__white, transparent, bold, 10px, $family2, 12px, $color__white);
+          }
+
+          .button-block__button:first-of-type {
+            margin-bottom: 10px;
+          }
+        }
+
       }
     }
   }

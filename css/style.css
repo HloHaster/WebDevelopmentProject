@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 .header .header__body .header__menu .menu__list .list__item a:hover {
   text-decoration: underline;
 }
-@media (min-width: 991px) and (max-width: 1199px) {
+@media (min-width: 991px) and (max-width: 1216px) {
   .header .container {
     width: 92%;
   }
@@ -279,13 +279,15 @@ h1, h2, h3, h4, h5, h6 {
 .slide .slide__container .slide__body .slide__title {
   font: 70px/31% "Open Sans", sans-serif;
   letter-spacing: 0.1em;
+  text-align: center;
   color: #FFFFFF;
   margin-bottom: 61px;
 }
 .slide .slide__container .slide__body .slide__text {
   width: 89%;
-  font: 30px/73% "Open Sans", sans-serif;
+  font: 30px/30px "Open Sans", sans-serif;
   letter-spacing: 0.1em;
+  text-align: center;
   color: #FFFFFF;
   margin-bottom: 127px;
 }
@@ -308,6 +310,134 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 26px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+}
+@media (min-width: 991px) and (max-width: 1216px) {
+  .slide .slide__container .slide__body .slide__title {
+    font: 57px/57px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+  }
+  .slide .slide__container .slide__body .slide__text {
+    font: 25px/25px "Open Sans", sans-serif;
+    margin-bottom: 100px;
+  }
+  .slide .slide__container .slide__body .slide__button-block {
+    width: 63%;
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  .slide {
+    margin-top: 100px;
+    padding: 170px 0 65px 0;
+  }
+  .slide .slide__container {
+    width: 93%;
+  }
+  .slide .slide__container .slide__body .slide__title {
+    font: 47px/50px "Open Sans", sans-serif;
+    margin-bottom: 33px;
+  }
+  .slide .slide__container .slide__body .slide__text {
+    font: 20px/20px "Open Sans", sans-serif;
+    margin-bottom: 85px;
+  }
+  .slide .slide__container .slide__body .slide__button-block {
+    width: 63%;
+    margin-bottom: 80px;
+  }
+  .slide .slide__container .slide__body .slide__button-block .button-block__button {
+    font-size: 20px;
+    padding: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .slide {
+    margin-top: 75px;
+    padding: 100px 0 50px 0;
+  }
+  .slide .slide__container {
+    width: 95%;
+    padding: 5px 0;
+  }
+  .slide .slide__container .slide__body .slide__title {
+    font: 38px/35px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+  }
+  .slide .slide__container .slide__body .slide__text {
+    width: 85%;
+    font: 18px/18px "Open Sans", sans-serif;
+    margin-bottom: 50px;
+  }
+  .slide .slide__container .slide__body .slide__button-block {
+    width: 37%;
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slide .slide__container .slide__body .slide__button-block .button-block__button {
+    width: 100%;
+    padding: 15px 15px;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    font: bold 15px "Roboto", sans-serif;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
+  .slide .slide__container .slide__body .slide__button-block .button-block__button:first-of-type {
+    margin-bottom: 20px;
+  }
+  .slide .slide__container .slide__body a {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .slide {
+    margin-top: 75px;
+    padding: 10px 0 10px 0;
+  }
+  .slide .slide__container {
+    width: 94%;
+    padding: 10px 0;
+  }
+  .slide .slide__container .slide__body .slide__title {
+    font: 16px/20px "Open Sans", sans-serif;
+    margin-bottom: 10px;
+  }
+  .slide .slide__container .slide__body .slide__text {
+    width: 80%;
+    font: 10px/12px "Open Sans", sans-serif;
+    margin-bottom: 15px;
+  }
+  .slide .slide__container .slide__body .slide__button-block {
+    width: 37%;
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slide .slide__container .slide__body .slide__button-block .button-block__button {
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    font: bold 10px "Roboto", sans-serif;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
+  .slide .slide__container .slide__body .slide__button-block .button-block__button:first-of-type {
+    margin-bottom: 10px;
+  }
 }
 
 /* About us Style */
