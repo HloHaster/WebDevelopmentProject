@@ -311,6 +311,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
+.slide .slide__container .slide__body .slide__button-block .activeSlideButton {
+  width: 46%;
+  padding: 22px 22px;
+  border: 4px solid #00897B;
+  background-color: #00897B;
+  font: bold 22px "Roboto", sans-serif;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
 @media (min-width: 991px) and (max-width: 1216px) {
   .slide .slide__container .slide__body .slide__title {
     font: 57px/57px "Open Sans", sans-serif;
@@ -392,6 +402,16 @@ h1, h2, h3, h4, h5, h6 {
   .slide .slide__container .slide__body .slide__button-block .button-block__button:first-of-type {
     margin-bottom: 20px;
   }
+  .slide .slide__container .slide__body .slide__button-block .activeSlideButton {
+    width: 100%;
+    padding: 15px 15px;
+    border: 2px solid #00897B;
+    background-color: #00897B;
+    font: bold 15px "Roboto", sans-serif;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
   .slide .slide__container .slide__body a {
     display: none;
   }
@@ -437,6 +457,16 @@ h1, h2, h3, h4, h5, h6 {
   }
   .slide .slide__container .slide__body .slide__button-block .button-block__button:first-of-type {
     margin-bottom: 10px;
+  }
+  .slide .slide__container .slide__body .slide__button-block .activeSlideButton {
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #00897B;
+    background-color: #00897B;
+    font: bold 10px "Roboto", sans-serif;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
   }
 }
 

@@ -2,7 +2,7 @@
 
 // При прокрутке меняет цвет header
 const header = document.querySelector('.header');
-const slideHeight = document.querySelector('.slide').clientHeight;
+const slideHeight = document.querySelector('.slide').offsetHeight;
 
 window.addEventListener('scroll', function () {
     const scrollFromTop = document.querySelector('html').scrollTop;
@@ -41,5 +41,21 @@ if (menuLinks.length > 0) {
             });
             e.preventDefault();
         }
+    }
+}
+
+
+/* Slide Script */
+
+// Изменение кнопки
+const slideButtons = document.querySelectorAll('.button-block__button');
+
+if (slideButtons.length > 0) {
+    slideButtons.forEach(item => {
+        item.addEventListener("click", addClass);
+    });
+
+    function addClass(e) {
+        e.target.classList.toggle('activeSlideButton');
     }
 }

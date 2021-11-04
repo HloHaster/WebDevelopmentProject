@@ -265,6 +265,10 @@ $color__dark-gray: #222321;
         .button-block__button {
           @include button(46%, 22px, 22px, 4px, $color__white, transparent, bold, 22px, $family2, 26px, $color__white);
         }
+
+        .activeSlideButton {
+          @include button(46%, 22px, 22px, 4px, $color__green, $color__green, bold, 22px, $family2, 26px, $color__white);
+        }
       }
     }
   }
@@ -349,6 +353,10 @@ $color__dark-gray: #222321;
           .button-block__button:first-of-type {
             margin-bottom: 20px;
           }
+
+          .activeSlideButton {
+            @include button(100%, 15px, 15px, 2px, $color__green, $color__green, bold, 15px, $family2, 15px, $color__white);
+          }
         }
 
         a {
@@ -390,8 +398,11 @@ $color__dark-gray: #222321;
           .button-block__button:first-of-type {
             margin-bottom: 10px;
           }
-        }
 
+          .activeSlideButton {
+            @include button(100%, 8px, 10px, 2px, $color__green, $color__green, bold, 10px, $family2, 12px, $color__white);
+          }
+        }
       }
     }
   }
