@@ -59,3 +59,17 @@ if (slideButtons.length > 0) {
         e.target.classList.toggle('activeSlideButton');
     }
 }
+
+
+
+const arrow = document.querySelectorAll('.arrow');
+
+if (arrow.length > 0) {
+    arrow.forEach(item => {
+        item.addEventListener("click", sayHi);
+    });
+
+    function sayHi(e) {
+        alert('hi');
+    }
+}
