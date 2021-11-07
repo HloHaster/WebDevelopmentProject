@@ -62,14 +62,23 @@ if (slideButtons.length > 0) {
 
 
 
-const arrow = document.querySelectorAll('.arrow');
+const arrowList = document.querySelectorAll('.arrow');
 
-if (arrow.length > 0) {
-    arrow.forEach(item => {
-        item.addEventListener("click", sayHi);
+if (arrowList.length > 0) {
+    arrowList.forEach(item => {
+        item.addEventListener("click", showClass);
     });
 
-    function sayHi(e) {
-        alert('hi');
+    function showClass(e) {
+        const arrow = e.target;
+        arrow.classList.toggle('arrowUp');
+
+        const hiddenBlocks = Array.from(arrow.parentElement.children).filter(item => {
+            return item.classList.contains('hidden-class');
+        });
+
+        hiddenBlocks.forEach(item => {
+            item.classList.toggle('active');
+        })
     }
 }
