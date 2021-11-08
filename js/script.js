@@ -22,7 +22,7 @@ function open() {
 }
 
 
-// Прокрутка при клике
+// Прокрутка при клике на ссылку в шапке
 const menuLinks = document.querySelectorAll('.list__item');
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
@@ -61,7 +61,20 @@ if (slideButtons.length > 0) {
 }
 
 
+// Services script
+document.getElementById('serviceButton').onclick = showAll;
 
+function showAll() {
+    const hiddenService = document.querySelectorAll('.hidden-service');
+
+    hiddenService.forEach(item => {
+        item.classList.toggle('show-service');
+    })
+}
+
+
+
+// Стрелки в мобильной версии
 const arrowList = document.querySelectorAll('.arrow');
 
 if (arrowList.length > 0) {

@@ -481,10 +481,10 @@ $color__dark-gray: #222321;
         height: 20px;
         border-radius: 20px;
         background-color: $color__green;
-      }
 
-      .next-prev__button:not(:last-of-type) {
-        //margin-right: 15px;
+        &:first-of-type {
+          background-color: $color__blue;
+        }
       }
 
       .hidden-button {
@@ -1109,6 +1109,10 @@ $color__dark-gray: #222321;
           .hidden-service {
             display: none;
           }
+
+          .show-service {
+            display: block;
+          }
         }
 
         .services__button {
@@ -1368,10 +1372,71 @@ $color__dark-gray: #222321;
 
         .contact__communication-group {
           display: none;
+          flex-direction: column;
+          margin: 30px 0 40px 0;
+          justify-content: center;
+          max-width: 280px;
+
+          .communication-group__method {
+            width: 100%;
+
+            &:not(:last-of-type) {
+              margin-bottom: 30px;
+            }
+
+            .method__img {
+              width: 70px;
+              height: 70px;
+              margin-bottom: 15px;
+
+              img {
+                max-width: 40px;
+                max-height: 40px;
+              }
+            }
+
+            .method__link {
+              font: 600 20px/30px $family;
+            }
+          }
         }
 
         .contact__form {
           display: none;
+
+          .form__input-area {
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            .input-area__data {
+              width: 100%;
+              margin-bottom: 0;
+
+              .input-area__input {
+                width: 100%;
+                padding: 18px 0 14px 30px;
+                margin-bottom: 15px;
+              }
+            }
+
+            .input-area__message {
+              width: 100%;
+
+              textarea {
+                padding: 14px 0 0 30px;
+                min-height: 150px;
+              }
+            }
+          }
+
+          .form__button {
+            @include button(100%, 13px, 15px, 0, transparent, $color__blue, 600, 26px, $family, 28px, $color__white);
+            border-radius: 20px;
+          }
+        }
+
+        .active {
+          display: flex;
         }
       }
     }
