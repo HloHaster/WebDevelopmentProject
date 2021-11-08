@@ -2,10 +2,10 @@
 
 // При прокрутке меняет цвет header
 const header = document.querySelector('.header');
-const slideHeight = document.querySelector('.slide').offsetHeight;
 
 window.addEventListener('scroll', function () {
         const scrollFromTop = document.querySelector('html').scrollTop;
+        const slideHeight = document.querySelector('.slide').offsetHeight;
         header.style.backgroundColor = scrollFromTop > slideHeight ? '#EBEBEB' : '';
     }
 )
@@ -243,8 +243,6 @@ function testName(input) {
 function testTel(input) {
     return input.value !== '' && telRegex.test(input.value);
 }
-
-
 
 
 // Стрелки в мобильной версии
