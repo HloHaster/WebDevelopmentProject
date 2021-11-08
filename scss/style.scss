@@ -74,10 +74,6 @@ $color__dark-gray: #222321;
   display: none;
 }
 
-//.active {
-//  display: block;
-//}
-
 .lock {
   overflow: hidden;
 }
@@ -268,6 +264,7 @@ $color__dark-gray: #222321;
         align-items: center;
         background-color: $color__white;
         margin-bottom: 45px;
+        cursor: pointer;
 
         .service__content {
           width: 100%;
@@ -275,7 +272,10 @@ $color__dark-gray: #222321;
           flex-direction: column;
           align-items: center;
 
-          img {
+          .service__img {
+            width: 56px;
+            height: 62px;
+            background: url("../img/smartphone-black1.png");
             margin-bottom: 40px;
           }
 
@@ -298,6 +298,30 @@ $color__dark-gray: #222321;
 
         .service__button {
           @include button(auto, 17px, 14px, 2px, $color__black, transparent, 600, 20px, $family, 22px, $color__black);
+        }
+      }
+
+      .activeServiceCard {
+        background-color: $color__green;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+
+        .service__content {
+          .service__img {
+            background: url("../img/smartphone-white1.png");
+          }
+
+          .service__title {
+            color: $color__white;
+          }
+
+          .service__text {
+            color: $color__white;
+          }
+        }
+
+        .service__button {
+          border-color: $color__white;
+          color: $color__white;
         }
       }
     }
@@ -335,6 +359,7 @@ $color__dark-gray: #222321;
         display: flex;
         flex-direction: column;
         align-items: center;
+        cursor: pointer;
 
         .tariff__price-block {
           background-color: $color__blue;
@@ -388,13 +413,17 @@ $color__dark-gray: #222321;
           }
         }
 
-        &:hover {
-          box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
-        }
-
         .tariff__button {
           @include button(190px, 19px, 22px, 2px, $color__black, transparent, 600, 20px, $family, 22px, $color__black);
         }
+
+        .activePriceButton {
+          @include button(190px, 19px, 22px, 2px, $color__green, $color__green, 600, 20px, $family, 22px, $color__white);
+        }
+      }
+
+      .tariff-block__tariff-shadow {
+        box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
       }
     }
   }
@@ -664,6 +693,10 @@ $color__dark-gray: #222321;
           .input-area__input:not(:last-of-type) {
             margin-bottom: 40px;
           }
+
+          .error {
+            box-shadow: 0 0 15px red;
+          }
         }
 
         .input-area__message {
@@ -686,6 +719,11 @@ $color__dark-gray: #222321;
       .form__button {
         @include button(400px, 36px, 161px, 0, transparent, $color__blue, 600, 26px, $family, 28px, $color__white);
         border-radius: 20px;
+        pointer-events: none;
+      }
+
+      .activeButton {
+        pointer-events: all;
       }
     }
   }
@@ -1093,12 +1131,15 @@ $color__dark-gray: #222321;
 
           .services-blocks__service {
             width: 100%;
-            padding: 30px 60px;
+            padding: 30px 0;
 
             .service__content {
               flex-direction: row;
-              justify-content: space-between;
-              max-width: 200px;
+              justify-content: center;
+
+              .service__img {
+                margin-right: 24px;
+              }
 
               .service__text {
                 display: none;
@@ -1111,7 +1152,7 @@ $color__dark-gray: #222321;
           }
 
           .show-service {
-            display: block;
+            display: flex;
           }
         }
 

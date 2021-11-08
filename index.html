@@ -108,7 +108,7 @@
                 <div class="services__services-blocks hidden-class">
                     <div class="services-blocks__service">
                         <div class="service__content">
-                            <img src="img/smartphone-black1.png" alt="smartphone icon">
+                            <div class="service__img"></div>
                             <h4 class="service__title">Research</h4>
                             <p class="service__text">At vero eos et accusamus et iusto
                                 odio dignissimos ducimus qui
@@ -119,7 +119,7 @@
                     </div>
                     <div class="services-blocks__service">
                         <div class="service__content">
-                            <img src="img/smartphone-black1.png" alt="smartphone icon">
+                            <div class="service__img"></div>
                             <h4 class="service__title">Portfolio</h4>
                             <p class="service__text">At vero eos et accusamus et iusto
                                 odio dignissimos ducimus qui
@@ -130,7 +130,7 @@
                     </div>
                     <div class="services-blocks__service">
                         <div class="service__content">
-                            <img src="img/smartphone-black1.png" alt="smartphone icon">
+                            <div class="service__img"></div>
                             <h4 class="service__title">Support</h4>
                             <p class="service__text">At vero eos et accusamus et iusto
                                 odio dignissimos ducimus qui
@@ -141,7 +141,7 @@
                     </div>
                     <div class="services-blocks__service hidden-service">
                         <div class="service__content">
-                            <img src="img/smartphone-black1.png" alt="smartphone icon">
+                            <div class="service__img"></div>
                             <h4 class="service__title">Documentation</h4>
                             <p class="service__text">At vero eos et accusamus et iusto
                                 odio dignissimos ducimus qui
@@ -152,7 +152,7 @@
                     </div>
                     <div class="services-blocks__service hidden-service">
                         <div class="service__content">
-                            <img src="img/smartphone-black1.png" alt="smartphone icon">
+                            <div class="service__img"></div>
                             <h4 class="service__title">Development</h4>
                             <p class="service__text">At vero eos et accusamus et iusto
                                 odio dignissimos ducimus qui
@@ -163,7 +163,7 @@
                     </div>
                     <div class="services-blocks__service hidden-service">
                         <div class="service__content">
-                            <img src="img/smartphone-black1.png" alt="smartphone icon">
+                            <div class="service__img"></div>
                             <h4 class="service__title">Design</h4>
                             <p class="service__text">At vero eos et accusamus et iusto
                                 odio dignissimos ducimus qui
@@ -466,12 +466,12 @@
                     </div>
                 </div>
 
-                <form name="form" method="post" enctype="multipart/form-data" class="contact__form hidden-class">
+                <form name="form" method="post" enctype="multipart/form-data" class="contact__form hidden-class" id="form">
                     <div class="form__input-area">
                         <div class="input-area__data">
-                            <input type="text" id="your__name" placeholder="Your name" class="input-area__input">
-                            <input type="email" id="email" placeholder="Your Email" class="input-area__input">
-                            <input type="tel" id="tel" placeholder="Your Phone" class="input-area__input">
+                            <input type="text" id="name" placeholder="Your name" class="input-area__input name required">
+                            <input type="email" id="email" placeholder="Your Email" class="input-area__input email required">
+                            <input type="tel" id="tel" placeholder="Your Phone" class="input-area__input tel required">
                         </div>
                         <div class="input-area__message">
                             <textarea placeholder="Write message"></textarea>

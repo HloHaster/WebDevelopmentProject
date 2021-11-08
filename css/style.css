@@ -361,6 +361,7 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
   background-color: #FFFFFF;
   margin-bottom: 45px;
+  cursor: pointer;
 }
 .services .services__body .services__services-blocks .services-blocks__service .service__content {
   width: 100%;
@@ -375,7 +376,10 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
 }
-.services .services__body .services__services-blocks .services-blocks__service .service__content img {
+.services .services__body .services__services-blocks .services-blocks__service .service__content .service__img {
+  width: 56px;
+  height: 62px;
+  background: url("../img/smartphone-black1.png");
   margin-bottom: 40px;
 }
 .services .services__body .services__services-blocks .services-blocks__service .service__content .service__title {
@@ -401,6 +405,24 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 22px;
   letter-spacing: 0.1em;
   color: #000000;
+}
+.services .services__body .services__services-blocks .activeServiceCard {
+  background-color: #00897B;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+.services .services__body .services__services-blocks .activeServiceCard .service__content .service__img {
+  background: url("../img/smartphone-white1.png");
+}
+.services .services__body .services__services-blocks .activeServiceCard .service__content .service__title {
+  color: #FFFFFF;
+}
+.services .services__body .services__services-blocks .activeServiceCard .service__content .service__text {
+  color: #FFFFFF;
+}
+.services .services__body .services__services-blocks .activeServiceCard .service__button {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
 }
 .services .services__body .services__button {
   width: 221px;
@@ -456,6 +478,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block {
   background-color: #3949AB;
@@ -508,10 +531,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
   border-bottom: 1px solid #BFBFBF;
 }
-.price .price__body .price__tariff-block .tariff-block__tariff:hover {
-  -webkit-box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
-          box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
-}
 .price .price__body .price__tariff-block .tariff-block__tariff .tariff__button {
   width: 190px;
   padding: 19px 22px;
@@ -521,6 +540,20 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 22px;
   letter-spacing: 0.1em;
   color: #000000;
+}
+.price .price__body .price__tariff-block .tariff-block__tariff .activePriceButton {
+  width: 190px;
+  padding: 19px 22px;
+  border: 2px solid #00897B;
+  background-color: #00897B;
+  font: 600 20px "Open Sans", sans-serif;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+.price .price__body .price__tariff-block .tariff-block__tariff-shadow {
+  -webkit-box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
 }
 
 /* Team Style */
@@ -880,6 +913,10 @@ h1, h2, h3, h4, h5, h6 {
 .contact .contact__body .contact__form .form__input-area .input-area__data .input-area__input:not(:last-of-type) {
   margin-bottom: 40px;
 }
+.contact .contact__body .contact__form .form__input-area .input-area__data .error {
+  -webkit-box-shadow: 0 0 15px red;
+          box-shadow: 0 0 15px red;
+}
 .contact .contact__body .contact__form .form__input-area .input-area__message {
   width: 47%;
 }
@@ -904,6 +941,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
   color: #FFFFFF;
   border-radius: 20px;
+  pointer-events: none;
+}
+.contact .contact__body .contact__form .activeButton {
+  pointer-events: all;
 }
 
 /* Footer Style */
@@ -1281,17 +1322,19 @@ h1, h2, h3, h4, h5, h6 {
   }
   .services .second__container .services__body .services__services-blocks .services-blocks__service {
     width: 100%;
-    padding: 30px 60px;
+    padding: 30px 0;
   }
   .services .second__container .services__body .services__services-blocks .services-blocks__service .service__content {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    max-width: 200px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .services .second__container .services__body .services__services-blocks .services-blocks__service .service__content .service__img {
+    margin-right: 24px;
   }
   .services .second__container .services__body .services__services-blocks .services-blocks__service .service__content .service__text {
     display: none;
@@ -1300,7 +1343,9 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
   .services .second__container .services__body .services__services-blocks .show-service {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .services .second__container .services__body .services__button {
     display: none;
