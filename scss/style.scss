@@ -988,6 +988,7 @@ $color__dark-gray: #222321;
 
   .arrow {
     display: block;
+    position: static;
     width: 20px;
     height: 20px;
     border-top: 5px solid $color__black;
@@ -1002,6 +1003,7 @@ $color__dark-gray: #222321;
   /* Header Style */
   .header {
     min-height: 75px;
+    z-index: 1;
 
     .main__container {
       width: 90%;
@@ -1083,6 +1085,7 @@ $color__dark-gray: #222321;
 
     .second__container {
       .about__body {
+
         .about__text-block {
           margin-bottom: 30px;
         }

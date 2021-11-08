@@ -162,7 +162,7 @@ for (let index = 0; index < formReq.length; index++) {
     }
 }
 
-function validateEmail(e) {
+function validateEmail() {
     if (!testEmail(emailInput)) {
         formAddError(emailInput);
         return;
@@ -174,7 +174,7 @@ function validateEmail(e) {
     }
 }
 
-function validateName(e) {
+function validateName() {
     if (!testName(nameInput)) {
         formAddError(nameInput);
         return;
@@ -186,7 +186,7 @@ function validateName(e) {
     }
 }
 
-function validateTel(e) {
+function validateTel() {
     if (!testTel(telInput)) {
         formAddError(telInput);
         return;
