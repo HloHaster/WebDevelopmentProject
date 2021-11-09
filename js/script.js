@@ -1,12 +1,13 @@
 /* Header Script */
 
 // При прокрутке меняет цвет header
+
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', function () {
         const scrollFromTop = document.querySelector('html').scrollTop;
         const slideHeight = document.querySelector('.slide').offsetHeight;
-        header.style.backgroundColor = scrollFromTop > slideHeight ? '#EBEBEB' : '';
+        header.style.backgroundColor = scrollFromTop >= slideHeight ? '#EBEBEB' : '';
     }
 )
 

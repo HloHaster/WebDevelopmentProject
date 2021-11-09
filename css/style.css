@@ -1035,29 +1035,24 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 100px;
   }
 }
-@media (min-width: 769px) and (max-width: 991px) {
-  .slide {
-    margin-top: 100px;
-    padding: 170px 0 65px 0;
+@media (min-width: 991px) and (max-width: 1199px) {
+  .second__container {
+    width: 85%;
   }
-  .slide .slide__container {
-    width: 93%;
+
+  .about .about__body .about__blocks .blocks__block {
+    width: 24%;
   }
-  .slide .slide__container .slide__body .slide__title {
-    font: 47px/50px "Open Sans", sans-serif;
-    margin-bottom: 33px;
+
+  .services .services__body .services__services-blocks .services-blocks__service {
+    padding: 30px 18px;
   }
-  .slide .slide__container .slide__body .slide__text {
-    font: 20px/20px "Open Sans", sans-serif;
-    margin-bottom: 85px;
+
+  .contact .contact__body .contact__communication-group .communication-group__method {
+    width: 32%;
   }
-  .slide .slide__container .slide__body .slide__button-block {
-    width: 63%;
-    margin-bottom: 80px;
-  }
-  .slide .slide__container .slide__body .slide__button-block .button-block__button {
-    font-size: 20px;
-    padding: 16px;
+  .contact .contact__body .contact__communication-group .communication-group__method .method__link {
+    font: 600 19px/25px "Open Sans", sans-serif;
   }
 }
 @media (max-width: 991px) {
@@ -1100,9 +1095,119 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 80%;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 991px) {
+  .second__container {
+    width: 90%;
+  }
+
   .slide {
-    margin-top: 75px;
+    margin-top: 100px;
+    padding: 150px 0 65px 0;
+  }
+  .slide .slide__container {
+    width: 93%;
+  }
+  .slide .slide__container .slide__body .slide__title {
+    font: 47px/50px "Open Sans", sans-serif;
+    margin-bottom: 33px;
+  }
+  .slide .slide__container .slide__body .slide__text {
+    font: 20px/20px "Open Sans", sans-serif;
+    margin-bottom: 85px;
+  }
+  .slide .slide__container .slide__body .slide__button-block {
+    width: 63%;
+    margin-bottom: 80px;
+  }
+  .slide .slide__container .slide__body .slide__button-block .button-block__button {
+    font-size: 20px;
+    padding: 16px;
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+  .about .second__container .about__body .about__text-block {
+    margin-bottom: 80px;
+  }
+  .about .second__container .about__body .about__blocks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .second__container .about__body .about__blocks .blocks__block {
+    width: 47%;
+  }
+  .about .second__container .about__body .about__blocks .blocks__block:first-of-type {
+    margin-right: 40px;
+  }
+  .about .second__container .about__body .about__blocks .blocks__block:last-of-type {
+    margin-top: 50px;
+  }
+
+  .services {
+    padding: 80px 0;
+  }
+  .services .services__body .services__text-block {
+    margin-bottom: 80px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service {
+    width: 45%;
+    padding: 20px 15px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service .service__content .service__img {
+    margin-bottom: 25px;
+  }
+
+  .contact {
+    padding: 80px 0;
+  }
+  .contact .contact__body .contact__text-block {
+    margin-bottom: 80px;
+  }
+  .contact .contact__body .contact__communication-group {
+    margin-bottom: 80px;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method {
+    width: 33%;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method .method__img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 30px;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method .method__link {
+    font: 600 16px/25px "Open Sans", sans-serif;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__data .input-area__input {
+    padding: 20px 0 20px 15px;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .second__container {
+    width: 95%;
+  }
+
+  .main-text .main-text__title {
+    font: bold 30px "Open Sans", sans-serif;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-bottom: 25px;
+  }
+  .main-text .main-text__description {
+    font: 16px "Open Sans", sans-serif;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+  }
+
+  .slide {
+    margin-top: 100px;
     padding: 100px 0 50px 0;
   }
   .slide .slide__container {
@@ -1154,6 +1259,332 @@ h1, h2, h3, h4, h5, h6 {
   }
   .slide .slide__container .slide__body a {
     display: none;
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+  .about .second__container .about__body .about__text-block {
+    margin-bottom: 60px;
+  }
+  .about .second__container .about__body .about__blocks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .second__container .about__body .about__blocks .blocks__block {
+    width: 47%;
+  }
+  .about .second__container .about__body .about__blocks .blocks__block:first-of-type {
+    margin-right: 20px;
+  }
+  .about .second__container .about__body .about__blocks .blocks__block:last-of-type {
+    margin-top: 50px;
+  }
+
+  .services {
+    padding: 80px 0;
+  }
+  .services .services__body .services__text-block {
+    margin-bottom: 80px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service {
+    width: 48%;
+    padding: 20px 15px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service .service__content .service__img {
+    margin-bottom: 25px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service .service__content .service__title {
+    font: 600 18px/18px "Open Sans", sans-serif;
+    margin-bottom: 18px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service .service__content .service__text {
+    font: 14px/20px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+  }
+
+  .contact {
+    padding: 80px 0;
+  }
+  .contact .contact__body .contact__text-block {
+    margin-bottom: 80px;
+  }
+  .contact .contact__body .contact__text-block .main-text__title {
+    font: bold 30px "Open Sans", sans-serif;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+  }
+  .contact .contact__body .contact__text-block .main-text__description {
+    font: 16px "Open Sans", sans-serif;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
+  .contact .contact__body .contact__communication-group {
+    margin-bottom: 60px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method {
+    width: 48%;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method .method__img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 30px;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method .method__link {
+    font: 600 18px/25px "Open Sans", sans-serif;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method:last-of-type {
+    margin-top: 30px;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__data {
+    width: 50%;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__data .input-area__input {
+    padding: 15px 0 15px 15px;
+    font: 600 16px/20px "Open Sans", sans-serif;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__data .input-area__input:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__message textarea {
+    padding: 15px 0 15px 15px;
+    font: 600 16px/20px "Open Sans", sans-serif;
+  }
+  .contact .contact__body .contact__form .form__button {
+    width: 300px;
+    padding: 20px 20px;
+    border: 0 solid transparent;
+    background-color: #3949AB;
+    font: 600 22px "Open Sans", sans-serif;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
+}
+@media (min-width: 481px) and (max-width: 576px) {
+  .second__container {
+    width: 95%;
+  }
+
+  .slide {
+    margin-top: 100px;
+    padding: 80px 0 50px 0;
+  }
+  .slide .slide__container {
+    width: 95%;
+    padding: 5px 0;
+  }
+  .slide .slide__container .slide__body .slide__title {
+    font: 32px/35px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+  }
+  .slide .slide__container .slide__body .slide__text {
+    width: 85%;
+    font: 18px/18px "Open Sans", sans-serif;
+    margin-bottom: 50px;
+  }
+  .slide .slide__container .slide__body .slide__button-block {
+    width: 37%;
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slide .slide__container .slide__body .slide__button-block .button-block__button {
+    width: 100%;
+    padding: 15px 15px;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    font: bold 15px "Roboto", sans-serif;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
+  .slide .slide__container .slide__body .slide__button-block .button-block__button:first-of-type {
+    margin-bottom: 20px;
+  }
+  .slide .slide__container .slide__body .slide__button-block .activeSlideButton {
+    width: 100%;
+    padding: 15px 15px;
+    border: 2px solid #00897B;
+    background-color: #00897B;
+    font: bold 15px "Roboto", sans-serif;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
+  .slide .slide__container .slide__body a {
+    display: none;
+  }
+
+  .main-text .main-text__title {
+    font: bold 27px "Open Sans", sans-serif;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-bottom: 25px;
+  }
+  .main-text .main-text__description {
+    font: 14px "Open Sans", sans-serif;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+  }
+
+  .about {
+    padding: 50px 0;
+  }
+  .about .about__body .about__text-block {
+    margin-bottom: 50px;
+  }
+  .about .about__body .about__blocks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .about__body .about__blocks .blocks__block {
+    padding: 0 10px;
+    width: 50%;
+  }
+  .about .about__body .about__blocks .blocks__block img {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .about .about__body .about__blocks .blocks__block .block__title {
+    font: 600 18px/18px "Open Sans", sans-serif;
+    margin-bottom: 20px;
+  }
+  .about .about__body .about__blocks .blocks__block .block__text {
+    font: 14px/22px "Open Sans", sans-serif;
+  }
+  .about .about__body .about__blocks .blocks__block:last-of-type {
+    margin-top: 30px;
+  }
+
+  .services {
+    padding: 50px 0;
+  }
+  .services .services__body .services__text-block {
+    margin-bottom: 50px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service {
+    width: 48%;
+    padding: 15px 10px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service .service__content .service__img {
+    margin-bottom: 20px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service .service__content .service__title {
+    font: 600 18px/18px "Open Sans", sans-serif;
+    margin-bottom: 18px;
+  }
+  .services .services__body .services__services-blocks .services-blocks__service .service__content .service__text {
+    font: 13px/18px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+  }
+
+  .contact {
+    padding: 50px 0;
+  }
+  .contact .contact__body .contact__text-block {
+    margin-bottom: 50px;
+  }
+  .contact .contact__body .contact__text-block .main-text__title {
+    font: bold 27px "Open Sans", sans-serif;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+  }
+  .contact .contact__body .contact__text-block .main-text__description {
+    font: 14px "Open Sans", sans-serif;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+  }
+  .contact .contact__body .contact__communication-group {
+    margin-bottom: 50px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method {
+    width: 50%;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method .method__img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method .method__img img {
+    width: 50%;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method .method__link {
+    font: 600 16px/22px "Open Sans", sans-serif;
+  }
+  .contact .contact__body .contact__communication-group .communication-group__method:last-of-type {
+    margin-top: 30px;
+  }
+  .contact .contact__body .contact__form .form__input-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__data {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__data .input-area__input {
+    padding: 20px 0 20px 15px;
+    font: 600 15px/20px "Open Sans", sans-serif;
+    border: 1px solid red;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__data .input-area__input:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__message {
+    width: 100%;
+  }
+  .contact .contact__body .contact__form .form__input-area .input-area__message textarea {
+    min-height: 135px;
+    padding: 15px 0 15px 15px;
+    font: 600 15px/20px "Open Sans", sans-serif;
+  }
+  .contact .contact__body .contact__form .form__button {
+    width: 300px;
+    padding: 20px 20px;
+    border: 0 solid transparent;
+    background-color: #3949AB;
+    font: 600 22px "Open Sans", sans-serif;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
   }
 }
 @media (max-width: 480px) {
@@ -1270,6 +1701,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 12px;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+  }
+  .slide .slide__container .slide__body .slide__arrow {
+    display: none;
   }
 
   /* About Style */
