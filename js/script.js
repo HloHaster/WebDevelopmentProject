@@ -226,7 +226,7 @@ function formRemoveError(input) {
     input.classList.remove('error');
 }
 
-let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
+let emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,8})+$/;
 let telRegex = /^((80)|(\+375))(((29)|(33)|(25)|(44))|\(((29)|(33)|(25)|(44)\)))\d{3}-?\d{2}-?\d{2}$/;
 
 //функция теста email
@@ -266,3 +266,30 @@ if (arrowList.length > 0) {
         })
     }
 }
+
+// Стрелки для тарифов в блоке price
+const priceArrowList = document.querySelectorAll('.price-block__arrow');
+
+if (priceArrowList.length > 0) {
+    priceArrowList.forEach(item => {
+        item.addEventListener("click", showCharacteristics);
+    });
+
+    function showCharacteristics(e) {
+        const arrow = e.target;
+        arrow.classList.toggle('arrowUp');
+
+        let parentBlock = arrow.closest('.tariff-block__tariff');
+
+        parentBlock.classList.contains('price__hidden-class');
+        const hiddenBlocks = Array.from(parentBlock.children).filter(item => {
+            return item.classList.contains('price__hidden-class');
+        })
+
+        hiddenBlocks.forEach(item => {
+            item.classList.toggle('activeCharacteristics');
+        })
+    }
+}
+
+

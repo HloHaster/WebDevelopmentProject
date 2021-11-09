@@ -62,7 +62,9 @@
                         Ut enim ad minim veniam.</p>
                 </div>
 
-                <div class="arrow"><div class="test>"></div></div>
+                <div class="arrow">
+                    <div class="test>"></div>
+                </div>
 
                 <div class="about__blocks hidden-class">
                     <div class="blocks__block">
@@ -193,57 +195,65 @@
                 <div class="price__tariff-block hidden-class">
                     <div class="tariff-block__tariff">
                         <div class="tariff__price-block">
-                            <p class="price-block__title">Free Trail</p>
-                            <p class="price-block__cost">
-                                <span>$</span>
-                                <span>00</span>
-                                <span>per month</span>
-                            </p>
+                            <div class="price-block__top-group">
+                                <p class="price-block__title">Free Trail</p>
+                                <p class="price-block__cost">
+                                    <span>$</span>
+                                    <span>00</span>
+                                    <span>per month</span>
+                                </p>
+                            </div>
+                            <div class="price-block__arrow"></div>
                         </div>
-                        <ul class="tariff__list">
+                        <ul class="tariff__list price__hidden-class">
                             <li class="tariff__item">30 Free Trail</li>
                             <li class="tariff__item">5 Free Projects</li>
                             <li class="tariff__item">PHP 5 Enabled</li>
                             <li class="tariff__item">24/7 Supports</li>
                         </ul>
-                        <button class="tariff__button">Order Now</button>
+                        <button class="tariff__button price__hidden-class">Order Now</button>
                     </div>
 
                     <div class="tariff-block__tariff">
                         <div class="tariff__price-block">
-                            <p class="price-block__title">Basic</p>
-                            <p class="price-block__cost">
-                                <span>$</span>
-                                <span>50</span>
-                                <span>per month</span>
-                            </p>
+                            <div class="price-block__top-group">
+                                <p class="price-block__title">Basic</p>
+                                <p class="price-block__cost">
+                                    <span>$</span>
+                                    <span>50</span>
+                                    <span>per month</span>
+                                </p>
+                            </div>
+                            <div class="price-block__arrow"></div>
                         </div>
-                        <ul class="tariff__list">
+                        <ul class="tariff__list price__hidden-class">
                             <li class="tariff__item">30 Free Trail</li>
                             <li class="tariff__item">5 Free Projects</li>
                             <li class="tariff__item">PHP 5 Enabled</li>
                             <li class="tariff__item">24/7 Supports</li>
                         </ul>
-                        <button class="tariff__button">Order Now</button>
+                        <button class="tariff__button price__hidden-class">Order Now</button>
                     </div>
 
                     <div class="tariff-block__tariff">
                         <div class="tariff__price-block">
-                            <p class="price-block__title">Ultimates</p>
-                            <p class="price-block__cost">
-                                <span>$</span>
-                                <span>99</span>
-                                <span>per month</span>
-                            </p>
-                            <div class="arrow"></div>
+                            <div class="price-block__top-group">
+                                <p class="price-block__title">Ultimates</p>
+                                <p class="price-block__cost">
+                                    <span>$</span>
+                                    <span>99</span>
+                                    <span>per month</span>
+                                </p>
+                            </div>
+                            <div class="price-block__arrow"></div>
                         </div>
-                        <ul class="tariff__list">
+                        <ul class="tariff__list price__hidden-class">
                             <li class="tariff__item">30 Free Trail</li>
                             <li class="tariff__item">5 Free Projects</li>
                             <li class="tariff__item">PHP 5 Enabled</li>
                             <li class="tariff__item">24/7 Supports</li>
                         </ul>
-                        <button class="tariff__button">Order Now</button>
+                        <button class="tariff__button price__hidden-class">Order Now</button>
                     </div>
                 </div>
             </div>
@@ -466,12 +476,16 @@
                     </div>
                 </div>
 
-                <form name="form" method="post" enctype="multipart/form-data" class="contact__form hidden-class" id="form">
+                <form name="form" method="post" enctype="multipart/form-data" class="contact__form hidden-class"
+                      id="form">
                     <div class="form__input-area">
                         <div class="input-area__data">
-                            <input type="text" id="name" placeholder="Your name" class="input-area__input name required">
-                            <input type="email" id="email" placeholder="Your Email" class="input-area__input email required">
-                            <input type="tel" id="tel" placeholder="Your Phone" class="input-area__input tel required">
+                            <input type="text" id="name" placeholder="Your name"
+                                   class="input-area__input name required">
+                            <input type="email" id="email" placeholder="Your Email"
+                                   class="input-area__input email required">
+                            <input type="tel" id="tel" placeholder="Your Phone"
+                                   class="input-area__input tel required">
                         </div>
                         <div class="input-area__message">
                             <textarea placeholder="Write message"></textarea>

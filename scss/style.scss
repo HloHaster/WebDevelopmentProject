@@ -30,26 +30,21 @@ $color__dark-gray: #222321;
   color: $tc;
 }
 
-@mixin main-text($tc, $dc) {
-  max-width: 822px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@mixin main-text__title($fs, $fw, $tc, $mb) {
+  font: bold $fs $family;
+  line-height: $fw;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: $tc;
+  margin-bottom: $mb;
+}
 
-  .main-text__title {
-    font: bold 36px/49px $family;
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: $tc;
-    margin-bottom: 30px;
-  }
-
-  .main-text__description {
-    font: 18px/24px $family;
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: $dc;
-  }
+@mixin main-text__description($fs, $fw, $dc) {
+  font: $fs $family;
+  line-height: $fw;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: $dc;
 }
 
 .wrapper {
@@ -67,7 +62,18 @@ $color__dark-gray: #222321;
 }
 
 .main-text {
-  @include main-text($color__black, $color__black);
+  max-width: 822px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .main-text__title {
+    @include main-text__title(36px, 49px, $color__black, 30px);
+  }
+
+  .main-text__description {
+    @include main-text__description(18px, 24px, $color__black);
+  }
 }
 
 .arrow {
@@ -146,7 +152,7 @@ $color__dark-gray: #222321;
     max-width: 1050px;
     margin: 0 auto;
     padding: 0 10px;
-    width: 85%; /////////////////////////////////////// на макете 67%
+    width: 85%; /////////////////////////////////////// todo: пересмотреть! 67
 
     .slide__body {
       display: flex;
@@ -365,37 +371,40 @@ $color__dark-gray: #222321;
           background-color: $color__blue;
           width: 100%;
           padding: 50px 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
 
-          .price-block__title {
-            font: 25px/88% $family;
-            text-align: center;
-            letter-spacing: 0.1em;
-            color: $color__white;
-            margin-bottom: 50px;
-          }
+          .price-block__top-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-          .price-block__cost {
-            font-family: $family;
-            line-height: 35px;
-            letter-spacing: 0.1em;
-            color: $color__white;
-
-            span:first-of-type {
-              font: 25px/22px $family;
-              margin-right: 3px;
-              vertical-align: top;
+            .price-block__title {
+              font: 25px/88% $family;
+              text-align: center;
+              letter-spacing: 0.1em;
+              color: $color__white;
+              margin-bottom: 50px;
             }
 
-            span:nth-child(2) {
-              font-size: 50px;
-              margin-right: 10px;
-            }
+            .price-block__cost {
+              font-family: $family;
+              line-height: 35px;
+              letter-spacing: 0.1em;
+              color: $color__white;
 
-            span:last-of-type {
-              font-size: 20px;
+              span:first-of-type {
+                font: 25px/22px $family;
+                margin-right: 3px;
+                vertical-align: top;
+              }
+
+              span:nth-child(2) {
+                font-size: 50px;
+                margin-right: 10px;
+              }
+
+              span:last-of-type {
+                font-size: 20px;
+              }
             }
           }
         }
@@ -623,7 +632,14 @@ $color__dark-gray: #222321;
     align-items: center;
 
     .contact__text-block {
-      @include main-text($color__white, $color__white);
+      .main-text__title {
+        @include main-text__title(36px, 49px, $color__white, 30px);
+      }
+
+      .main-text__description {
+        @include main-text__description(18px, 24px, $color__white);
+      }
+
       margin-bottom: 115px;
     }
 
@@ -971,18 +987,11 @@ $color__dark-gray: #222321;
 
   .main-text {
     .main-text__title {
-      font: bold 26px/36px $family;
-      text-align: center;
-      letter-spacing: 0.1em;
-      color: $color__black;
-      margin-bottom: 15px;
+      @include main-text__title(26px, 36px, $color__black, 15px);
     }
 
     .main-text__description {
-      font: 14px/20px $family;
-      text-align: center;
-      letter-spacing: 0.1em;
-      color: $color__black;
+      @include main-text__description(14px, 20px, $color__black);
     }
   }
 
@@ -1191,56 +1200,83 @@ $color__dark-gray: #222321;
 
           .tariff-block__tariff {
             width: 100%;
-            padding-bottom: 0;
+            padding: 0;
 
             .tariff__price-block {
-              border: 1px solid red;
-              flex-direction: row;
+              display: flex;
+              flex-direction: column;
               align-items: center;
+              padding: 24px 0 21px 0;
 
-              .price-block__title {
-                width: 50%;
-                text-align: center;
-                //border-right: 1px solid $color__white;
-                border: 1px solid red;
-              }
+              .price-block__top-group {
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                height: 55px;
+                margin-bottom: 20px;
 
-              .price-block__cost {
-                border: 1px solid red;
-                width: 50%;
-                text-align: center;
-                line-height: 22px;
-
-                span:first-of-type {
-                  font: 20px/22px $family;
-                  margin-right: 4px;
-                  vertical-align: top;
+                .price-block__title {
+                  width: 50%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font: 22px/22px $family;
+                  border-right: 1px solid $color__white;
+                  margin-bottom: 0;
                 }
 
-                span:nth-child(2) {
-                  font-size: 30px;
-                  margin-right: 0;
-                }
+                .price-block__cost {
+                  width: 50%;
+                  text-align: center;
+                  line-height: 22px;
 
-                span:last-of-type {
-                  font-size: 18px;
-                  border: 1px solid green;
+                  span:first-of-type {
+                    font: 20px/16px $family;
+                    margin-right: -3px;
+                  }
+
+                  span:nth-child(2) {
+                    font: 30px/22px $family;
+                    margin-right: 0;
+                  }
+
+                  span:last-of-type {
+                    display: block;
+                    font-size: 18px;
+                  }
                 }
               }
             }
 
-            .arrow {
+            .price-block__arrow {
+              display: block;
+              position: static;
+              width: 20px;
+              height: 20px;
               border-top: 5px solid $color__white;
               border-right: 5px solid $color__white;
+              transform: rotate(135deg);
+            }
+
+            .arrowUp {
+              transform: rotate(-45deg);
             }
           }
 
           .tariff__list {
             display: none;
+            margin: 5px 0 20px 0;
           }
 
           .tariff__button {
             display: none;
+            @include button(130px, 9px, 10px, 2px, $color__black, transparent, 600, 14px, $family, 22px, $color__black);
+            margin-bottom: 20px;
+          }
+
+          .activeCharacteristics {
+            display: block;
           }
         }
 
@@ -1317,55 +1353,55 @@ $color__dark-gray: #222321;
           margin-bottom: 30px;
         }
 
-          .blog__article {
-            display: none;
-            margin-top: 30px;
-            width: 100%;
-            max-width: 320px;
-            align-items: center;
-            justify-content: space-between;
+        .blog__article {
+          display: none;
+          margin-top: 30px;
+          width: 100%;
+          max-width: 320px;
+          align-items: center;
+          justify-content: space-between;
 
-            .article__image {
-              width: 34%;
+          .article__image {
+            width: 34%;
+          }
+
+          .article__text-block {
+            width: 64%;
+            padding: 0;
+
+            .article__title {
+              margin-bottom: 11px;
+
+              a {
+                font: 600 16px/22px $family;
+              }
             }
 
-            .article__text-block {
-              width: 64%;
-              padding: 0;
+            .article__data {
+              flex-direction: column;
+              align-items: flex-start;
 
-              .article__title {
-                margin-bottom: 11px;
+              .data__block {
+                display: flex;
+                margin-bottom: 1px;
 
-                a {
-                  font: 600 16px/22px $family;
+                img {
+                  width: 15px;
+                  height: 15px;
+                }
+
+                span {
+                  margin-left: 10px;
+                  font: 600 14px/22px $family;
                 }
               }
+            }
 
-              .article__data {
-                flex-direction: column;
-                align-items: flex-start;
-
-                .data__block {
-                  display: flex;
-                  margin-bottom: 1px;
-
-                  img {
-                    width: 15px;
-                    height: 15px;
-                  }
-
-                  span {
-                    margin-left: 10px;
-                    font: 600 14px/22px $family;
-                  }
-                }
-              }
-
-              .article__description {
-                display: none;
-              }
+            .article__description {
+              display: none;
             }
           }
+        }
 
         div:nth-child(4) {
           flex-direction: row;
@@ -1397,17 +1433,14 @@ $color__dark-gray: #222321;
         .contact__text-block {
           margin-bottom: 30px;
 
-          .main-text__title {
-            font: bold 26px/36px $family;
-            color: $color__white;
-            margin-bottom: 15px;
-          }
+            .main-text__title {
+              @include main-text__title(26px, 36px, $color__white, 15px);
+            }
 
-          .main-text__description {
-            font: 14px/20px $family;
-            color: $color__white;
+            .main-text__description {
+              @include main-text__description(14px, 20px, $color__white);
+            }
           }
-        }
 
         .arrow {
           border-top: 5px solid $color__white;

@@ -103,14 +103,16 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
 }
 .main-text .main-text__title {
-  font: bold 36px/49px "Open Sans", sans-serif;
+  font: bold 36px "Open Sans", sans-serif;
+  line-height: 49px;
   text-align: center;
   letter-spacing: 0.1em;
   color: #000000;
   margin-bottom: 30px;
 }
 .main-text .main-text__description {
-  font: 18px/24px "Open Sans", sans-serif;
+  font: 18px "Open Sans", sans-serif;
+  line-height: 24px;
   text-align: center;
   letter-spacing: 0.1em;
   color: #000000;
@@ -484,6 +486,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #3949AB;
   width: 100%;
   padding: 50px 0;
+}
+.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -495,29 +499,29 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
 }
-.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__title {
+.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__title {
   font: 25px/88% "Open Sans", sans-serif;
   text-align: center;
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-bottom: 50px;
 }
-.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__cost {
+.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost {
   font-family: "Open Sans", sans-serif;
   line-height: 35px;
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
-.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__cost span:first-of-type {
+.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:first-of-type {
   font: 25px/22px "Open Sans", sans-serif;
   margin-right: 3px;
   vertical-align: top;
 }
-.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__cost span:nth-child(2) {
+.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:nth-child(2) {
   font-size: 50px;
   margin-right: 10px;
 }
-.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__cost span:last-of-type {
+.price .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:last-of-type {
   font-size: 20px;
 }
 .price .price__body .price__tariff-block .tariff-block__tariff .tariff__list {
@@ -782,28 +786,19 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
 }
 .contact .contact__body .contact__text-block {
-  max-width: 822px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: 115px;
 }
 .contact .contact__body .contact__text-block .main-text__title {
-  font: bold 36px/49px "Open Sans", sans-serif;
+  font: bold 36px "Open Sans", sans-serif;
+  line-height: 49px;
   text-align: center;
   letter-spacing: 0.1em;
   color: #FFFFFF;
   margin-bottom: 30px;
 }
 .contact .contact__body .contact__text-block .main-text__description {
-  font: 18px/24px "Open Sans", sans-serif;
+  font: 18px "Open Sans", sans-serif;
+  line-height: 24px;
   text-align: center;
   letter-spacing: 0.1em;
   color: #FFFFFF;
@@ -1167,14 +1162,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .main-text .main-text__title {
-    font: bold 26px/36px "Open Sans", sans-serif;
+    font: bold 26px "Open Sans", sans-serif;
+    line-height: 36px;
     text-align: center;
     letter-spacing: 0.1em;
     color: #000000;
     margin-bottom: 15px;
   }
   .main-text .main-text__description {
-    font: 14px/20px "Open Sans", sans-serif;
+    font: 14px "Open Sans", sans-serif;
+    line-height: 20px;
     text-align: center;
     letter-spacing: 0.1em;
     color: #000000;
@@ -1378,10 +1375,23 @@ h1, h2, h3, h4, h5, h6 {
   }
   .price .main__container .price__body .price__tariff-block .tariff-block__tariff {
     width: 100%;
-    padding-bottom: 0;
+    padding: 0;
   }
   .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block {
-    border: 1px solid red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 24px 0 21px 0;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group {
+    width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1389,40 +1399,74 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 55px;
+    margin-bottom: 20px;
   }
-  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__title {
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__title {
     width: 50%;
-    text-align: center;
-    border: 1px solid red;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font: 22px/22px "Open Sans", sans-serif;
+    border-right: 1px solid #FFFFFF;
+    margin-bottom: 0;
   }
-  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__cost {
-    border: 1px solid red;
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost {
     width: 50%;
     text-align: center;
     line-height: 22px;
   }
-  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__cost span:first-of-type {
-    font: 20px/22px "Open Sans", sans-serif;
-    margin-right: 4px;
-    vertical-align: top;
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:first-of-type {
+    font: 20px/16px "Open Sans", sans-serif;
+    margin-right: -3px;
   }
-  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__cost span:nth-child(2) {
-    font-size: 30px;
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:nth-child(2) {
+    font: 30px/22px "Open Sans", sans-serif;
     margin-right: 0;
   }
-  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__cost span:last-of-type {
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:last-of-type {
+    display: block;
     font-size: 18px;
-    border: 1px solid green;
   }
-  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .arrow {
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .price-block__arrow {
+    display: block;
+    position: static;
+    width: 20px;
+    height: 20px;
     border-top: 5px solid #FFFFFF;
     border-right: 5px solid #FFFFFF;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .arrowUp {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   .price .main__container .price__body .price__tariff-block .tariff__list {
     display: none;
+    margin: 5px 0 20px 0;
   }
   .price .main__container .price__body .price__tariff-block .tariff__button {
     display: none;
+    width: 130px;
+    padding: 9px 10px;
+    border: 2px solid #000000;
+    background-color: transparent;
+    font: 600 14px "Open Sans", sans-serif;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+  .price .main__container .price__body .price__tariff-block .activeCharacteristics {
+    display: block;
   }
   .price .main__container .price__body .active {
     display: block;
@@ -1569,12 +1613,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
   .contact .second__container .contact__body .contact__text-block .main-text__title {
-    font: bold 26px/36px "Open Sans", sans-serif;
+    font: bold 26px "Open Sans", sans-serif;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.1em;
     color: #FFFFFF;
     margin-bottom: 15px;
   }
   .contact .second__container .contact__body .contact__text-block .main-text__description {
-    font: 14px/20px "Open Sans", sans-serif;
+    font: 14px "Open Sans", sans-serif;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
     color: #FFFFFF;
   }
   .contact .second__container .contact__body .arrow {
