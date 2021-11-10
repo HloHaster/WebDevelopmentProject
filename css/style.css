@@ -1149,17 +1149,45 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
   .header .header__body .header__burger {
-    width: 35px;
-    height: 23px;
+    width: 42px;
+    height: 28px;
     display: block;
     position: relative;
     cursor: pointer;
-    background: url("../img/burger1.png") center center no-repeat;
-    background-size: 100%;
+  }
+  .header .header__body .header__burger span {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    display: block;
+    height: 4px;
+    width: 42px;
+    margin-bottom: 4px;
+    background-color: #000000;
+  }
+  .header .header__body .header__burger span:last-of-type {
+    margin-bottom: 0;
   }
   .header .header__body .header__close {
-    background: url("../img/Close.png") center center no-repeat;
-    background-size: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .header__body .header__close span {
+    position: absolute;
+  }
+  .header .header__body .header__close span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header .header__body .header__close span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .header .header__body .header__close span:first-of-type, .header .header__body .header__close span:last-of-type {
+    display: none;
   }
 }
 @media (min-width: 769px) and (max-width: 991px) {
@@ -2154,6 +2182,42 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 480px) {
+  .header .header__body .header__burger {
+    width: 21px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  .header .header__body .header__burger span {
+    display: block;
+    height: 2px;
+    width: 21px;
+    margin-bottom: 2px;
+    background-color: #000000;
+  }
+  .header .header__body .header__close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .header__body .header__close span {
+    position: absolute;
+  }
+  .header .header__body .header__close span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header .header__body .header__close span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .header .header__body .header__close span:first-of-type, .header .header__body .header__close span:last-of-type {
+    display: none;
+  }
+
   .second__container {
     width: 100%;
   }
