@@ -913,6 +913,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 40px;
 }
 .contact .contact__body .contact__form .form__input-area .input-area__data .error {
+  -webkit-appearance: none;
   -webkit-box-shadow: 0 0 15px red;
           box-shadow: 0 0 15px red;
 }
@@ -2093,7 +2094,6 @@ h1, h2, h3, h4, h5, h6 {
   .contact .contact__body .contact__form .form__input-area .input-area__data .input-area__input {
     padding: 20px 0 20px 15px;
     font: 600 15px/20px "Open Sans", sans-serif;
-    border: 1px solid red;
   }
   .contact .contact__body .contact__form .form__input-area .input-area__data .input-area__input:not(:last-of-type) {
     margin-bottom: 15px;

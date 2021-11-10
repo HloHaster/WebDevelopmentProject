@@ -719,6 +719,7 @@ $color__dark-gray: #222321;
           }
 
           .error {
+            -webkit-appearance: none;
             box-shadow: 0 0 15px red;
           }
         }
@@ -2162,7 +2163,6 @@ $color__dark-gray: #222321;
             .input-area__input {
               padding: 20px 0 20px 15px;
               font: 600 15px/20px $family;
-              border: 1px solid red;
 
               &:not(:last-of-type) {
                 margin-bottom: 15px;
