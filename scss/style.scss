@@ -152,7 +152,7 @@ $color__dark-gray: #222321;
     max-width: 1050px;
     margin: 0 auto;
     padding: 0 10px;
-    width: 85%; /////////////////////////////////////// todo: пересмотреть! 67
+    width: 85%;
 
     .slide__body {
       display: flex;
@@ -719,7 +719,7 @@ $color__dark-gray: #222321;
           }
 
           .error {
-            -webkit-appearance: none;
+            //-webkit-appearance: none;
             box-shadow: 0 0 15px red;
           }
         }
