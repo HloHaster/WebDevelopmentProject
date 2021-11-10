@@ -789,6 +789,7 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
 }
 .contact .contact__body .contact__text-block {
+  max-width: 822px;
   margin-bottom: 115px;
 }
 .contact .contact__body .contact__text-block .main-text__title {
@@ -1075,6 +1076,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 30px 18px;
   }
 
+  .price .main__container {
+    width: 92%;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff {
+    width: 31%;
+    max-width: 390px;
+  }
+
   .team .main__container {
     width: 92%;
   }
@@ -1216,6 +1225,41 @@ h1, h2, h3, h4, h5, h6 {
   }
   .services .services__body .services__services-blocks .services-blocks__service .service__content .service__img {
     margin-bottom: 25px;
+  }
+
+  .price {
+    padding: 80px 0;
+  }
+  .price .main__container {
+    width: 95%;
+  }
+  .price .main__container .price__body .price__text-block {
+    margin-bottom: 80px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff {
+    width: 31%;
+    padding-bottom: 20px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block {
+    padding: 25px 0;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__title {
+    font: 20px/88% "Open Sans", sans-serif;
+    margin-bottom: 25px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:first-of-type {
+    font: 18px/22px "Open Sans", sans-serif;
+    margin-right: 2px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:nth-child(2) {
+    font-size: 35px;
+    margin-right: 5px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:last-of-type {
+    font-size: 18px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__list {
+    margin: 10px 0 20px 0;
   }
 
   .team {
@@ -1467,6 +1511,56 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
 
+  .price {
+    padding: 80px 0;
+  }
+  .price .main__container {
+    width: 95%;
+  }
+  .price .main__container .price__body .price__text-block {
+    margin-bottom: 80px;
+  }
+  .price .main__container .price__body .price__tariff-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff {
+    width: 45%;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block {
+    padding: 25px 0;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__title {
+    font: 22px/88% "Open Sans", sans-serif;
+    margin-bottom: 25px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:first-of-type {
+    font: 18px/22px "Open Sans", sans-serif;
+    margin-right: 2px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:nth-child(2) {
+    font-size: 35px;
+    margin-right: 5px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:last-of-type {
+    font-size: 18px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__list {
+    margin: 10px 0 20px 0;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff:first-of-type {
+    margin: 0 10px 0 0;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff:last-of-type {
+    margin: 30px 0 0 0;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff:nth-child(2) {
+    margin: 0 0 0 10px;
+  }
+
   .team {
     padding: 80px 0;
   }
@@ -1669,6 +1763,22 @@ h1, h2, h3, h4, h5, h6 {
     width: 95%;
   }
 
+  .main-text .main-text__title {
+    font: bold 27px "Open Sans", sans-serif;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-bottom: 25px;
+  }
+  .main-text .main-text__description {
+    font: 14px "Open Sans", sans-serif;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+  }
+
   .slide {
     margin-top: 100px;
     padding: 80px 0 50px 0;
@@ -1724,22 +1834,6 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
-  .main-text .main-text__title {
-    font: bold 27px "Open Sans", sans-serif;
-    line-height: 27px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: #000000;
-    margin-bottom: 25px;
-  }
-  .main-text .main-text__description {
-    font: 14px "Open Sans", sans-serif;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    color: #000000;
-  }
-
   .about {
     padding: 50px 0;
   }
@@ -1792,6 +1886,51 @@ h1, h2, h3, h4, h5, h6 {
   .services .services__body .services__services-blocks .services-blocks__service .service__content .service__text {
     font: 13px/18px "Open Sans", sans-serif;
     margin-bottom: 30px;
+  }
+
+  .price {
+    padding: 50px 0;
+  }
+  .price .main__container {
+    width: 95%;
+  }
+  .price .main__container .price__body .price__text-block {
+    margin-bottom: 50px;
+  }
+  .price .main__container .price__body .price__tariff-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff {
+    width: 80%;
+    padding-bottom: 30px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block {
+    padding: 25px 0;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__title {
+    font: 26px/88% "Open Sans", sans-serif;
+    margin-bottom: 25px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:first-of-type {
+    font: 25px/22px "Open Sans", sans-serif;
+    margin-right: 2px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:nth-child(2) {
+    font-size: 50px;
+    margin-right: 5px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__price-block .price-block__top-group .price-block__cost span:last-of-type {
+    font-size: 20px;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff .tariff__list {
+    margin: 10px 0 20px 0;
+  }
+  .price .main__container .price__body .price__tariff-block .tariff-block__tariff:not(:last-of-type) {
+    margin-bottom: 20px;
   }
 
   .team {
